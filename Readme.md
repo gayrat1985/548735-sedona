@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Gayrat Turaev](https://up.htmlacademy.ru/htmlcss/21/user/548735).
-* Наставник: `Светлана Корякина`.
+* Наставник: `Светлана Корякина`https://up.htmlacademy.ru/htmlcss/21/user/477401.
 
 ---
 
