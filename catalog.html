@@ -7,27 +7,86 @@
 <body>
     <header class="main-header">
 		<nav class="main-navigation">
-			<a class="main-header-logo">
+			<a class="main-header-logo" href="index.html">
 				<img src="img/cityofsedona.svg" width="" height="" alt="Логотип города Седона">
 			</a>
 			<ul class="site-navigation">
-				<li><a href="info.html">Информация</a></li>
-				<li><a href="media.html">Фото и Видео</a></li>
-				<li><a href="map.html">Карта Штата</a></li>
-				<li><a href="hotel.html">Гостиницы</a></li> 
+				<li><a href="#">Информация</a></li>
+				<li><a href="#">Фото и Видео</a></li>
+				<li><a href="#">Карта Штата</a></li>
+				<li><a href="#">Гостиницы</a></li> 
 			</ul>
+			<h1 class="visually-hidden">Sedona</h1>
 		</nav> 
 		
-		<section class="visually hidden">
-			<p>Welcome</p>
-			<p>to the gorgeous<p>
-			<h1>Sedona</h1>
-			<p>"Because the grand Canyon lucks!<p>
-		</section>
 	</header>
 	<!-- end header -->
 	
 	<main class="container">
+		<section class="services">
+			<h2 class="visually-hidden">Сервис</h2>
+			<form>
+				<fieldset>
+					<legend>Инфраструктура:</legend>
+						<p><label>Бассейн<input type="checkbox" name="pool"></label><p>
+						<p><label>Парковка<input type="checkbox" name="parking"></label></p>
+						<p><label>Wi-fi<input type="checkbox" name="wi-fi"></label></p>
+				</fieldset>
+				
+				<fieldset>
+					<legend>Тип жилья:</legend>
+						<p><label>Гостиница<input type="checkbox" name="hotel"></label></p>
+						<p><label>Мотель<input type="checkbox" name="motelfg"></label></p>
+						<p><label>Апартаменты<input type="checkbox" name="apartments"></label></p>
+				</fieldset>
+				
+				<fieldset>
+					<legend>Стоимость в сутки (Р):</legend>
+				</fieldset>
+			</form>
+		</section>
+	
+		<section class="sort">
+			<h2 class="visually-hidden">Гостиницы</h2>
+			<p>Найдено:3</p>	
+			<ul class="">
+				<li>Сортировка:</li>
+				<li><a href="#">По цене</a></li>
+				<li><a href="#">По типу</a></li>
+				<li><a href="#">По рейтингу</a></li>
+			<ul>
+			
+			<ul class="hotel-list">
+				<li class="hotel-info">
+				<img src="" alt="">
+				<h3>Amara Resort & SPA</h3>
+				<p>Гостиница от 4000 Р</p>
+				</li>
+				<a class="button" href="#">Подробнее</a>
+				<a class="button" href="#">Забронировать</a>
+			</ul>
+			
+			<ul class="hotel-list">
+				<li class="hotel-info">
+				<img src="" alt="">
+				<h3>Desert Quail Inn</h3>
+				<p>Гостиница от 3000 Р</p>
+				<a class="button" href="#">Подробнее</a>
+				<a class="button" href="#">Забронировать</a>
+				</li>
+			</ul>
+			
+			<ul class="hotel-list">
+				<li class="hotel-info">
+				<img src="" alt="">
+				<h3>Villas at poco Diablo</h3>
+				<p>Гостиница от 4000 2000</p>
+				<a class="button" href="#">Подробнее</a>
+				<a class="button" href="#">Забронировать</a>
+				</li>
+			</ul>
+		</section>
+		
 	</main>
 	<!-- end main -->
 	
