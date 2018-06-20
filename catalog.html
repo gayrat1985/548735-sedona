@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Седона каталог</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
 </head>
-<body>
+<body class="inner-page">
     <header class="main-header">
 		<nav class="main-navigation">
 			<a class="main-header-logo" href="index.html">
@@ -14,7 +17,7 @@
 				<li><a href="#">Информация</a></li>
 				<li><a href="#">Фото и Видео</a></li>
 				<li><a href="#">Карта Штата</a></li>
-				<li><a href="#">Гостиницы</a></li> 
+				<li><a  class="hotels" href="#">Гостиницы</a></li> 
 			</ul>
 			<h1 class="visually-hidden">Sedona</h1>
 		</nav> 
@@ -25,66 +28,79 @@
 	<main class="container">
 		<section class="services">
 			<h2 class="visually-hidden">Сервис</h2>
-			<form>
+			<form class="service-type">
 				<fieldset>
 					<legend>Инфраструктура:</legend>
-						<p><label>Бассейн<input type="checkbox" name="pool"></label><p>
+						<p><label>Бассейн<input type="checkbox" name="pool" checked></label><p>
 						<p><label>Парковка<input type="checkbox" name="parking"></label></p>
 						<p><label>Wi-fi<input type="checkbox" name="wi-fi"></label></p>
 				</fieldset>
 				
 				<fieldset>
 					<legend>Тип жилья:</legend>
-						<p><label>Гостиница<input type="checkbox" name="hotel"></label></p>
-						<p><label>Мотель<input type="checkbox" name="motelfg"></label></p>
-						<p><label>Апартаменты<input type="checkbox" name="apartments"></label></p>
+						<p><label>Гостиница<input type="checkbox" name="hotel" checked></label></p>
+						<p><label>Мотель<input type="checkbox" name="motelfg" checked></label></p>
+						<p><label>Апартаменты<input type="checkbox" name="apartments" checked></label></p>
 				</fieldset>
 				
+				
 				<fieldset>
-					<legend>Стоимость в сутки (Р):</legend>
+					<legend>Стоимость в сутки(Р):</legend>
+					<label>
+						<input class="range" type="range" name="radio">
+					</label>	
 				</fieldset>
+				
+				
 			</form>
 		</section>
 	
-		<section class="sort">
+		<section class="filter">
 			<h2 class="visually-hidden">Гостиницы</h2>
 			<p>Найдено:3</p>	
-			<ul class="">
-				<li>Сортировка:</li>
-				<li><a href="#">По цене</a></li>
-				<li><a href="#">По типу</a></li>
-				<li><a href="#">По рейтингу</a></li>
-			<ul>
+			<ul class="filter">
+				<li>
+					<h3>Сортировка:</h3>
+					<ul>
+						<li><a href="#">По цене</a></li>
+						<li><a href="#">По типу</a></li>
+						<li><a href="#">По рейтингу</a></li>
+					</ul>
+				</li>
+			</ul>
+			<a href="#">Стрелка вверх</a>
+            <a href="#">Стрелка вниз</a>
 		</section>
 			
-		<section class="hotels-found">	
+		<section class="hotels">	
+			<h2 class="visually-hidden">Гостиницы</h2>
 			<ul class="hotel-list">
-				<li class="hotel-info">
+				<li class="hotel-item">
 					<img src="img/Layer21.jpg" width="135" height="90" alt="Гостиница Амара">
-					<h3>Amara Resort & SPA</h3>
+					<h3>Amara Resort &amp; SPA</h3>
 					<p>Гостиница от 4000 Р</p>
-					<a class="button" href="#">Подробнее</a>
-					<a class="button" href="#">Забронировать</a>
-					<p>Рейтинг:8,5</p>
+					<a class="button button-blue" href="#">Подробнее</a>
+					<a class="button button-brown" href="#">Забронировать</a>
+					<p class="rating">Рейтинг:8,5</p>
 				</li>
 				
 			
-			     <li class="hotel-info">
+			     <li class="hotel-item">
 					<img src="img/Layer89.jpg" width="135" height="90" alt="Гостиница Дезерт">
 					<h3>Desert Quail Inn</h3>
 					<p>Гостиница от 3000 Р</p>
-					<a class="button" href="#">Подробнее</a>
-					<a class="button" href="#">Забронировать</a>
-					<p>Рейтинг:8,9</p>
+					<a class="button button button-blue" href="#">Подробнее</a>
+					<a class="button button-brown" href="#">Забронировать</a>
+					<p class="rating">Рейтинг:8,9</p>
 				</li>
 				
-				<li class="hotel-info">
+				<li class="hotel-item">
 					<img src="img/Layer22.jpg" width="135" height="90" alt="Гостиница Виллас">
 					<h3>Villas at poco Diablo</h3>
 					<p>Гостиница от 4000 2000</p>
-					<a class="button" href="#">Подробнее</a>
-					<a class="button" href="#">Забронировать</a>
-					<p>Рейтинг:9,2</p>
+					<a class="button button button-blue" href="#">Подробнее</a>
+					<a class="button button-brown" href="#">Забронировать</a>
+					<p class="rating">Рейтинг:9,2</p>
 				</li>
 			</ul>
 		</section>
