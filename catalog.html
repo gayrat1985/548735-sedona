@@ -9,7 +9,7 @@
 </head>
 <body class="inner-page">
     <header class="main-header">
-		<nav class="main-navigation">
+	  <nav class="main-navigation">
 			<a class="main-header-logo" href="index.html">
 				<img src="img/logo.png" width="138" height="70" alt="Логотип города Седона">
 			</a>
@@ -19,13 +19,14 @@
 				<li><a href="#">Карта Штата</a></li>
 				<li><a  class="hotels" href="#">Гостиницы</a></li> 
 			</ul>
-			<h1 class="visually-hidden">Sedona</h1>
+			
 		</nav> 
 		
 	</header>
 	<!-- end header -->
 	
 	<main class="container">
+	  <h1 class="visually-hidden">Sedona</h1>
 		<section class="services">
 			<h2 class="visually-hidden">Сервис</h2>
 			<form class="service-type">
@@ -46,9 +47,14 @@
 				
 				<fieldset>
 					<legend>Стоимость в сутки(Р):</legend>
-					<label>
-						<input class="range" type="range" name="radio">
-					</label>	
+					<p class="from-to">
+						<label><input type="text" placeholder="От 0"></label>
+						<label><input type="text" placeholder="До 3000"></label>
+					</p>
+					<p>
+					<label><input class="range" type="range" name="radio"></label>	
+					</p>
+					<button class="button button-show">Показать</button>
 				</fieldset>
 				
 				
@@ -56,9 +62,8 @@
 		</section>
 	
 		<section class="filter">
-			<h2 class="visually-hidden">Сортировка</h2>
 			<p>Найдено:3</p>
-			<span>Сортировка:</span>
+			<h3>Сортировка:</h3>
 			<ul class="sort-list">
 				<li><a href="#">По цене</a></li>
 				<li><a href="#">По типу</a></li>
@@ -95,7 +100,7 @@
 					<h3>Villas at poco Diablo</h3>
 					<p>Гостиница от 4000 2000</p>
 					<a class="button button button-blue" href="#">Подробнее</a>
-					<button="button button-brown" href="#">Забронировать</button>
+					<button aria-controls=""class="button button-brown" href="#">Забронировать</button>
 					<p class="rating">Рейтинг:9,2</p>
 				</li>
 			</ul>
