@@ -200,7 +200,7 @@ a {
 }
 
 /* Catalog */
-.inner-page {
+.catalog {
 	font-size: 14px;
 	line-height: 21px;
 	color: #000000;
@@ -211,7 +211,7 @@ a {
 	background-repeat: no-repeat;
 }
 
-.inner-page .site-navigation .hotels:visited{
+.catalog .site-navigation .hotels:visited{
 	color: #766357; 
 }
 
@@ -327,12 +327,14 @@ body {
 	list-style: none;
 }
 
+.promo {
+	margin-bottom: 80px; 
+}
+
 .advantages-promo {
 	width: 576px;
 	margin: 0 auto;
-	
-	padding-top: 60px;
-	padding-bottom: 52px;
+	margin-bottom: 55px;
 }
 
 /* ---Display Flex Column List --- */
@@ -365,7 +367,7 @@ body {
 
 .advantages-list li:nth-child(3) {
 	order: 3;
-    
+   
 }
 
 .advantages-list li:nth-child(4) {
@@ -427,13 +429,13 @@ body {
 	margin: 0 auto;
 	text-align: center;
 	
-	padding-top: 25px;
+	margin-top: 55px;
 }
 
 .search-hotel button {
 	width: 576px;
 	padding: 35px 0;
-	margin-top: 10px;
+	margin-top: 50px;
 }
 
 
@@ -466,11 +468,38 @@ body {
 }
 
 
+/* --- Сеточные стили Каталога --- */
 
+.catalog-container {
+	width: 1056px;
+	margin: 0 auto;
+}
 
+.services {
+	margin-top: 37px;
+}
 
+.service-type {
+	display: flex;
+	
+}
 
+.service-type fieldset {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
 
+.service-type fieldset:nth-child(2) {
+	margin-left: 100px;
+}
 
+.service-type fieldset:nth-child(3) {
+	margin-left: auto;
+}
+
+.catalog-header {
+	margin-bottom: 37px;
+}
 
 
