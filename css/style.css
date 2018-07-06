@@ -16,8 +16,23 @@ body {
 
 }
 
+.container {
+    min-width: 768px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: ;
+	
+	outline: 3px solid black;
+}
+
 a {
 	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 .button {
@@ -80,15 +95,21 @@ a {
 	color: #81b3d2;
 }
 
-
-.visually-hidden {
-	margin: 1px;
-	padding: 1px;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden, 
+input[type="radio"].visually-hidden {
+	position: absolute;
+	
 	width: 1px;
 	height: 1px;
-	position: absolute;
+	margin: -1px;
 	border: 0;
-	clip: rect (0 0 0 0);
+	padding: 0;
+	
+	white-space: nowrap;
+	
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
 
@@ -147,34 +168,78 @@ a {
 	line-height: 26px;
 } 
 
-.advantages-list > .advantage-item {
+.recommendation-item h3 {
+	position: relative;
+}
+
+li:nth-child(1) .recommend-title::before {
+	content: " ";
+	
+	top: -95px;
+	left: 90px;
+	
+	position: absolute;
+	
+	width: 75px ;
+	height: 72px;
+	
+	background-color: #ffffff;
+	background-image: url(../img/icon-1.svg);
+	
+}
+
+li:nth-child(2) .recommend-title::before {
+	content: " ";
+	
+	top: -95px;
+	left: 110px;
+	
+	position: absolute;
+	
+	width: 75px ;
+	height: 74px;
+	
+	background-color: #ffffff;
+	background-image: url(../img/icon-2.svg);
+	background-repeat: no-repeat;
+	
+}
+
+li:nth-child(3) .recommend-title::before  {
+	content: " ";
+	
+	top: -95px;
+	left: 105px;
+	
+	position: absolute;
+	
+	width: 75px ;
+	height: 74px;
+	
+	background-color: #ffffff;
+	background-image: url(../img/icon-3.svg);
+	background-repeat: no-repeat;
+}
+
+
+
+.advantages-list >.advantage-item:nth-child(1),
+.advantages-list >.advantage-item:nth-child(2){
 	color:#ffffff;
 	background-color: #81b3d2;
 }
 
-.more-advantages .advantage-item {
+.more-advantages {
 	background-color: #eeeeee;
 }
 
-.recommendation-item:first-child {
-	background-image: url("../img/svg-sedona/icon-1.svg");
-	background-position: 0 0;
-	background-repeat: no-repeat;
+.interested {
+	font-size: 30px;
+	line-height: 26px;
+	font-weight: 700;
 }
 
-.recommendation-item:nth-child(2) {
-	background-image: url("../img/svg-sedona/icon-2.svg");
-	background-position: 0 0;
-	background-repeat: no-repeat;
-}
-
-.recommendation-item:last-child {
-	background-image: url("../img/svg-sedona/icon-3.svg");
-	background-position: 0 0;
-	background-repeat: no-repeat;
-}
-
-.search {
+.search-hotel {
 	text-align: center;
 }
 
@@ -189,13 +254,23 @@ a {
     list-style: none;
 }
 
+.hashtag {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700px;
+}
+
+.hashtag a{
+	color: #000000;
+}
+
 /* --- modal window --- */
 
-.modal-find .search-form{
+.pop-up .search-form{
 	text-align: center;
 }
 
-.modal-find label{
+.pop-up label{
 	font-weight: 700;
 }
 
@@ -210,6 +285,8 @@ a {
 	background-position: top center;
 	background-repeat: no-repeat;
 }
+
+/* ИЗМЕНИТЬ ЭТУ ЗАПИСЬ */
 
 .catalog .site-navigation .hotels:visited{
 	color: #766357; 
@@ -292,17 +369,12 @@ a {
 	
 }
 
-/* --- Сеточные стили --- */
+/* --- СЕТОЧНЫЕ СТИЛИ --- */
 
-html,
-body {
-	min-width: 768px;
-}
-
-.container {
-	width: 1200px;
+.wrapper {
+	width: 1056px;
 	margin: 0 auto;
-	padding: 0 40px;
+	outline: 2px solid purple;
 }
 
 .main-header {
@@ -310,196 +382,409 @@ body {
 }
 
 .main-navigation {
-    display: flex;
+	position: relative;
 }
 
-.main-header-logo {
+.main-navigation .main-header-logo {
+	position: absolute;
+	
 	width: 138px;
 	height: 70px;
+	
+	margin-left: 45%;
 }
 
 .site-navigation {
-	width: 1056px;
-	margin: 0 auto;
+	display: flex;
+	
 	margin: 0;
 	padding: 0;
 	
 	list-style: none;
 }
 
+.site-navigation li:nth-child(1) {
+	margin-right: 146px;
+}
+
+.site-navigation li:nth-child(2) {
+	margin-right: 389px;
+}
+
+.site-navigation li:nth-child(4) {
+	margin-left: auto;
+}
+
+.site-navigation a {
+	display: block;
+	padding: 14px 0;
+		
+	vertical-align: middle;	
+}
+
 .promo {
-	margin-bottom: 80px; 
+	outline: 1px solid red;
+	
+	margin-bottom: 92px;
 }
 
-.advantages-promo {
-	width: 576px;
-	margin: 0 auto;
-	margin-bottom: 55px;
+.advantage-promo {
+	outline: 1px solid red;
+	
+	
+	padding-top: 44px;
+	padding-bottom: 43px;
 }
 
-/* ---Display Flex Column List --- */
+.advantage-promo .context {
+	width: 442px;
+	margin: auto;
+	margin-bottom: 21px;
+}
+
+/* --- Advantage List --- */
 
 .advantages-list {
 	display: flex;
 	flex-direction: column;
-	
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
-.more-advantages {
-	padding: 0;
-	margin: 0;
+.advantages-list > li:nth-child(2) {
+	flex-direction: row-reverse;
 }
 
-/* ---Display Flex Row Items--- */
+/* --- Advantage Item --- */
 
 .advantage-item {
 	display: flex;
+	
+}
+
+.advantage-item:nth-child(1) img {
+	margin-left: auto;
+}
+
+.advantage-item:nth-child(2) img {
+	margin-right: auto;
 }
 
 /* --- Order --- */
 
 .advantages-list li:nth-child(2) {
 	order: 2;
-    flex-direction: row-reverse;
 }
 
 .advantages-list li:nth-child(3) {
 	order: 3;
-   
 }
 
 .advantages-list li:nth-child(4) {
 	order: 1;
 }
 
-/* --- Margin IMG --- */
 
-.advantage-item:nth-child(1) img{
-	margin-left: auto;
+/* --- Advantage Info--- */
+
+.advantage-info {
+	width: 275px;
 }
 
-.advantage-item:nth-child(2) img{
-	margin-right: auto;
-} 
-
-/* --- Advantage Item --- */
-
-.advantage-item-info {
-	display: flex;
-	flex-direction: column;
-	width: 290px;
+.advantage-info h3 {
+	width: 151px;
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 16px; 
 	
-	padding-top: 25px;
-	padding-right: 55px;
-	padding-left: 55px;
-	padding-bottom: 30px;
+	font-size: 21px;
+	line-height: 26px;
+}
+
+.advantage-info span {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.advantage-info p {
+	margin: 0;
+	padding: 0;
+	
+	margin-bottom: 35px;
+}
+
+.info-town {
+	margin-left: 70px;
+}
+
+.info-bridge {
+	width: 305px;
+	margin-right: 45px;
 }
 
 /* --- More Advantages --- */
 
 .more-advantages {
 	display: flex;
+	justify-content: space-between;
+	
+	padding: 0;
 }
+
 
 /* --- Recommendations --- */
 
 .recommendations-list {
 	display: flex;
+	line-height: 23px;
 	
-	padding: 0;
 	margin: 0;
+	padding: 0;
+}
+
+.recommendations-list li:nth-child(1) {
+	width: 255px;
+}
+
+.recommendations-list li:nth-child(2) {
+	width: 300px;
+	
+	margin-left: 121px;
+}
+
+.recommendations-list li:nth-child(3) {
+	width: 277px;
+	
+	margin-left: auto;
 }
 
 .recommendation-item {
- 	width: 400px;
 	
- 	padding-top: 155px;
- 	padding-bottom: 83px;	
+	width: 286px;
+	
+	padding-top: 135px;
+	padding-bottom: 69px;
 }
 
-.recommendation-item p {
-	width: 285px;
-	margin: 0 auto;
-}
+
+/* --- search-hotel --- */
 
 .search-hotel {
-	width: 576px;
-	margin: 0 auto;
-	text-align: center;
+	padding-top: 30px;
 	
-	margin-top: 55px;
+	outline: 1px solid red;
 }
 
-.search-hotel button {
-	width: 576px;
-	padding: 35px 0;
-	margin-top: 50px;
-}
-
-
-.modal-find form {
-	margin: 0 auto;
-	width: 476px;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	padding-top: 55px;
-	padding-bottom: 55px;
-	padding-left: 100px;
-}
-
-.main-footer {
-	display: flex;
-}
-
-.main-footer .hashtag,
-.main-footer .social-footer,
-.main-footer .copyright-footer {
-	width: 400px;
+.search-hotel .button {
+    width: 556px;
 	
+	margin-top: 26px;
+	padding: 30px 0;
+}
+
+/* --- hashtag, social-footer, copyright-footer --- */
+
+.wrapper-footer {
+	margin-top: -10px;
+	
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.social-footer ul{
+	display: flex;
+	
+	margin:0;
 	padding: 0;
-	margin: 0;
-	text-align: center;
 	
-	padding-top: 10px;
-	padding-bottom: 10px;
 }
 
-
-/* --- Сеточные стили Каталога --- */
-
-.catalog-container {
-	width: 1056px;
-	margin: 0 auto;
+.hashtag {
+	padding-top: 51px;
+	padding-right: 44px;
+	padding-bottom: 53px;
+	padding-left: 60px;
+	
 }
+
+.copyright-footer {
+	padding-top: 41px;
+	padding-right: 29px;
+	padding-bottom: 40px;
+	padding-left: 15px;
+}
+
+/* --- Сеточные стили каталога --- */
+
+.catalog .main-navigation {
+	margin-bottom: 27px;
+}
+
+/* --- Services --- */
 
 .services {
-	margin-top: 37px;
+	padding: 0;
+	margin: 0;
 }
 
 .service-type {
 	display: flex;
-	
 }
 
 .service-type fieldset {
 	padding: 0;
-	margin: 0;
+	
 	border: none;
 }
 
+.service-type fieldset:nth-child(1) {
+	width: 241px;
+}
+
 .service-type fieldset:nth-child(2) {
-	margin-left: 100px;
+	width: 288px;
+	margin-right: auto;
 }
 
 .service-type fieldset:nth-child(3) {
-	margin-left: auto;
+	width: 328px;
 }
 
-.catalog-header {
-	margin-bottom: 37px;
+/* --- Filter --- */
+
+.filter-range {
+  width: 330px;
+  margin: 50px auto; /* для демо */
+
+  color: #ffffff;
+  text-transform: uppercase;
 }
+
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 
 
