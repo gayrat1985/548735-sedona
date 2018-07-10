@@ -18,7 +18,7 @@ body {
 	max-width: 1200px;
 	margin-right: auto;
 	margin-left: auto;
-	box-shadow: 0pc 0px 40px 40px #f2f2f2; 
+	box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2); 
 }
 
 .inner-page .container {
@@ -26,7 +26,7 @@ body {
 	max-width: 1200px;
 	margin-right: auto;
 	margin-left: auto;
-	box-shadow: 0pc 0px 40px 40px #f2f2f2; 
+	box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2); 
 	background-color: #fefefe;
 }
 
@@ -59,6 +59,8 @@ img {
 	height: auto;
 }
 
+/* --- BUTTON --- */
+
 .button {
 	display: inline-block;
 	padding: 3px 17px;
@@ -74,6 +76,7 @@ img {
 	border: none;
 	cursor: pointer;
 }
+
 
 .button-brown {
 	background-color: #766357;
@@ -109,6 +112,8 @@ img {
 }
 
 .button-plus:hover,
+.button-plus:focus,
+.button-minus:hover,
 .button-minus:focus {
 	color: #000000;
 }
@@ -159,7 +164,7 @@ input[type="radio"].visually-hidden {
 	width: 138px;
 	height: 70px;
 
-	margin-left: 45%;
+	margin-left: 530px;
 }
 
 .site-navigation {
@@ -176,12 +181,14 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation li:nth-child(2) {
-	margin-right: 389px;
+	margin-right: 390px;
 }
+
 
 .site-navigation li:nth-child(4) {
 	margin-left: auto;
 }
+
 
 .site-navigation a {
 	display: block;
@@ -223,8 +230,8 @@ input[type="radio"].visually-hidden {
 .advantage-intro .context {
 	width: 450px;
 	margin: 0 auto;
-	margin-bottom: 30px;
-	
+	margin-top: 5px;
+    margin-bottom: 30px;
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
@@ -275,6 +282,8 @@ input[type="radio"].visually-hidden {
 .hotel-item h3 {
 	font-size: 21px;
 	line-height: 26px;
+	margin-top: 15px;
+	
 } 
 
 .advantage-item:nth-child(1) img {
@@ -285,44 +294,89 @@ input[type="radio"].visually-hidden {
 	margin-right: auto;
 }
 
-
 .advantage-info {
 	width: 275px;
+}
+
+li.advantage-item:nth-child(1) h3.info-title::after {
+	display: block;
+	content: "- №1 -";
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 300;
+	margin-top: 20px;
+}
+
+li.advantage-item:nth-child(2) h3.info-title::after {
+	display: block;
+	content: "- №2 -";
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 300;
+	margin-top: 20px;
+}
+
+li.advantage-item:nth-child(1) h3::after {
+	display: block;
+	content: "- №3 -";
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 300;
+	margin-top: 20px;
+}
+
+li.advantage-item:nth-child(2) h3::after {
+	display: block;
+	content: "- №4 -";
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 300;
+	margin-top: 20px;
+}
+
+li.advantage-item:nth-child(3) h3::after {
+	display: block;
+	content: "- №5 -";
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 300;
+	margin-top: 20px;
 }
 
 .advantage-info h3 {
 	width: 151px;
 	margin: 0 auto;
-	margin-top: 40px;
-	margin-bottom: 16px;
-
-	font-size: 21px;
+	
+    font-size: 21px;
 	line-height: 26px;
 }
 
-.advantage-info span {
-	display: block;
-	margin-bottom: 20px;
+
+.advantage-info.info-town {
+	margin-top: 30px;
+	margin-left: 60px;
+	margin-bottom: 16px;
 }
 
-.advantage-info p {
-	margin: 0;
-	padding: 0;
-
-	margin-bottom: 35px;
-}
-
-.info-town {
-	margin-left: 70px;
-}
-
-.info-bridge {
+.advantage-info.info-bridge {
 	width: 305px;
+	margin-top: 35px;
 	margin-right: 45px;
+	margin-bottom: 16px;
 }
 
 .more-advantages {
 	background-color: #eee;
+}
+
+.more-advantages .advantage-item {
+	padding-top: 35px;
+	padding-bottom: 45px;
+}
+
+.more-advantages p {
+	margin-top: 10px;
+	text-align: center;
 }
 
 .more-advantages-list {
@@ -419,7 +473,7 @@ li:nth-child(3) .recommend-title::before  {
 	text-align: center;
 	width: 568px;
 	
-	padding-top: 30px;
+	padding-top: 26px;
 	margin: 0 auto;
 }
 
@@ -436,18 +490,6 @@ li:nth-child(3) .recommend-title::before  {
 	padding: 30px 0;
 }
 
-/*--- MAP ---*/
-
- .main-footer-map .footer-column {
-    position: absolute;
-	width: 100%;  
-    bottom: 0;
-    left: 0;
-    right: 0;
-	  
-	background-color: #ffffff;  
-  }
-    
 
 /* --- POP-UP --- */
 
@@ -488,6 +530,12 @@ li:nth-child(3) .recommend-title::before  {
 	margin-top: 0;
 	width: 100%;
 }
+
+.form-item.check-in-out {
+	position: relative;
+}
+
+
 .form-item-block{
 	display: flex;
 	width: 100%;
@@ -504,12 +552,22 @@ li:nth-child(3) .recommend-title::before  {
 	padding: 10px;
 	border: none;
 	background-color: #eee;
+	cursor: pointer;
 }
 
-
-.form-item input[type="date"] {
+.form-item.check input[type="text"] {
+	background-color: #f2f2f2;
 	padding-right: 30px;
 }
+
+.form-item.check input[type="text"]:hover {
+	background-color: #ebebeb;
+}
+
+.form-item.check input[type="text"]:focus {
+	background-color: #ffffff;
+}
+
 
 .icon-calendar {
 	z-index: 1;
@@ -518,7 +576,7 @@ li:nth-child(3) .recommend-title::before  {
 	background-position: 300px center;
 }
 
- 
+
 .form-item-block .button{
 	margin: 0;
 	padding: 13px 10px;
@@ -557,19 +615,31 @@ li:nth-child(3) .recommend-title::before  {
 	margin-left: -3px;
 }
 
+/*--- MAP ---*/
+
+ .main-footer-map .footer-column {
+    position: absolute;
+	width: 100%;
+	bottom: 0;
+    left: 0;
+    right: 0;
+	background-color: #ffffff;  
+  }
+
 /* --- FOOTER --- */
 
+
 .main-footer {
-	position: absolute;
+	position: relative;
 	display: flex;
-	justify-content: space-around;
+	
 }
 
 .main-footer div {
 	display: flex;
 	align-items: center;
-	width: 400px;
-	height: 100px;
+	width: 401px;
+	min-height: 120px;
 	
 	background-color: #f9fbf6;
 }
@@ -581,7 +651,7 @@ li:nth-child(3) .recommend-title::before  {
 	line-height: 26px;
 	font-weight: 700px;
 	
-	justify-content: center
+	justify-content: center;
 }
 
 .hashtag-footer a{
@@ -634,7 +704,8 @@ li:nth-child(3) .recommend-title::before  {
 	margin-right: 8px;
 }
 
-.copyright-footer .htmlacademy-logo:hover path {
+.copyright-footer .htmlacademy-logo:hover path,
+.copyright-footer .htmlacademy-logo:focus path 								{
 	fill: #98c1da;
 }
 
@@ -659,18 +730,18 @@ li:nth-child(3) .recommend-title::before  {
 }
 
 .service-type fieldset {
-	width: 240px;
+	width: 250px;
 	padding: 0;
 	
 	border: none;
 }
 
-
 .options p {
 	margin-top: 25px;
 }
 
-.services legend{
+.services legend {
+	margin-left: -2px;
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 21px;
@@ -729,6 +800,7 @@ li:nth-child(3) .recommend-title::before  {
 
 .filter-range-title {
   margin-bottom: 9px;
+  margin-left: 13px;
 
   font-weight: 600;
   font-size: 16px;
@@ -738,9 +810,10 @@ li:nth-child(3) .recommend-title::before  {
 .price-controls {
   position: relative;
   
-  height: 36px;
+  width: 317px;	
+  height: 34px;
   margin-bottom: 20px;
-
+  margin-left: 10px;	
   font-size: 0;
 
   border: 2px solid #ffffff;
@@ -790,6 +863,7 @@ li:nth-child(3) .recommend-title::before  {
 .range-controls {
   position: relative;
 
+  margin-left: 10px;	
   margin-bottom: 32px;
 }
 
@@ -875,6 +949,7 @@ li:nth-child(3) .recommend-title::before  {
 	line-height: 26px;
 	font-weight: 700;
     margin: 0;
+	margin-left: px;
 }
 
 .sort-type {
@@ -885,11 +960,20 @@ li:nth-child(3) .recommend-title::before  {
 .sort-type h3 {
 	font-size: 12px;
 	line-height: 18px;
+	
+	margin-top: 18px;
+	margin-left: 28px;
 }
 
 .sort-type-list {
 	display: flex;
 	list-style: none;
+	
+	margin-top: 16px;
+}
+
+.sort-type-list li:nth-child(3) {
+	margin-left: 5px;
 }
 
 .sort-type-list a {
@@ -906,6 +990,12 @@ li:nth-child(3) .recommend-title::before  {
 	border: none;
 }
 
+.sort-type-list a:active {
+	color: #000000;
+	border: none;
+}
+
+
 .sort-buttons .button{
 	width: 20px;
 	margin: 0;
@@ -913,7 +1003,17 @@ li:nth-child(3) .recommend-title::before  {
 }
 
 
-/* --- Hotels --- */
+.button-arrow:hover path,
+.button-arrow:focus path {
+	fill: #231f20; 
+}
+
+.button-arrow:active path,
+.button-arrow:active path {
+	fill: #81b3d2; 
+}
+
+/* --- HOTELS --- */
 
 .hotels {
 	border-bottom: 1px solid #e5e5e5;
@@ -932,6 +1032,7 @@ li:nth-child(3) .recommend-title::before  {
 
 
 .hotel-item-info {
+	width: 260px; 
 	margin-left: 30px;
 }
 
@@ -939,8 +1040,14 @@ li:nth-child(3) .recommend-title::before  {
 	display: flex;
 }
 
+.details-booking p {
+	margin-top: 4px;
+}
+
 .hotel-item-info h3{
 	margin: 0;
+	
+	cursor: pointer;		
 }
 
 .hotel-item h3:hover,
@@ -959,6 +1066,7 @@ li:nth-child(3) .recommend-title::before  {
 }
 
 .rating-block{
+	width: 110px;
 	margin-left: auto;
 	display: flex;
 	flex-direction: column;
@@ -966,11 +1074,14 @@ li:nth-child(3) .recommend-title::before  {
 
 .rating-stars {
 	text-align: right;
+	margin-right: 4px;
+	margin-top: 3px;
 }
 
 .rating-value {
 	text-align: center;
 	margin-top: auto;
+
 	margin-bottom: 0;
 	padding: 3px 0;
 	color: #666;
