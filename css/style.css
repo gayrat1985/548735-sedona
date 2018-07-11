@@ -30,7 +30,7 @@ body {
 	background-color: #fefefe;
 }
 
-.inner-page .main-footer div {
+.inner-page .main-footer div{
 	background-color: #fefefe;
 }
 
@@ -38,7 +38,6 @@ body {
 	font-size: 14px;
 	line-height: 21px;
 	color: #000000;
-
 }
 
 .hotel-page:visited{
@@ -58,8 +57,6 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-
-/* --- BUTTON --- */
 
 .button {
 	display: inline-block;
@@ -615,6 +612,21 @@ li:nth-child(3) .recommend-title::before  {
 	margin-left: -3px;
 }
 
+.button-calendar {
+	position: absolute;
+	right: 45px;
+	fill: #cacaca;
+}
+
+.button-calendar:hover,
+.button-calendar:focus {
+	fill: #000000;			
+} 
+
+.button-calendar:active {
+	fill: #81b3d2;			
+}
+
 /*--- MAP ---*/
 
  .main-footer-map .footer-column {
@@ -1000,8 +1012,12 @@ li:nth-child(3) .recommend-title::before  {
 	width: 20px;
 	margin: 0;
 	padding: 0;
+	fill: #cacaca;
 }
 
+.button.button-arrow-down {
+	fill: #81b3d2;
+}
 
 .button-arrow:hover path,
 .button-arrow:focus path {
@@ -1013,11 +1029,9 @@ li:nth-child(3) .recommend-title::before  {
 	fill: #81b3d2; 
 }
 
+
 /* --- HOTELS --- */
 
-.hotels {
-	border-bottom: 1px solid #e5e5e5;
-}
 
 .hotel-list {
 	list-style: none;
@@ -1027,9 +1041,9 @@ li:nth-child(3) .recommend-title::before  {
 
 .hotel-item{
 	display: flex;
-	padding: 30px 0;
+	padding: 30px 70px;
+	border-bottom: 1px solid #e5e5e5;
 }
-
 
 .hotel-item-info {
 	width: 260px; 
