@@ -450,7 +450,7 @@ li:nth-child(2) .recommend-title::before {
 	background-repeat: no-repeat;
 }
 
-li:nth-child(3) .recommend-title::before  {
+li:nth-child(3) .recommend-title::before {
 	content: " ";
 	
 	top: -95px;
@@ -503,14 +503,15 @@ li:nth-child(3) .recommend-title::before  {
 	background: #fff;
 	box-shadow: 0 7px 15px 0 rgba(0,0,0,.15);
 }
-.pop-up-hide{
+
+.pop-up-hide {
 	display: none;
 }
-.pop-up-dropdown .search-form{
+.pop-up-dropdown .search-form {
 	text-align: center;
 }
 
-.pop-up-dropdown label{
+.pop-up-dropdown label {
 	font-weight: 700;
 }
 .pop-up-dropdown .search-form {
@@ -520,7 +521,7 @@ li:nth-child(3) .recommend-title::before  {
 	padding: 55px;
 }
 
-.form-item{
+.form-item {
 	display: flex;
 	align-items: center;
 	margin-bottom: 22px;
@@ -533,13 +534,13 @@ li:nth-child(3) .recommend-title::before  {
 }
 
 
-.form-item-block{
+.form-item-block {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
 }
 
-.form-item input{
+.form-item input {
 	box-sizing: border-box;
 	width: 100%;
 	font-size: 14px;
@@ -564,15 +565,6 @@ li:nth-child(3) .recommend-title::before  {
 .form-item.check input[type="text"]:focus {
 	background-color: #ffffff;
 }
-
-
-.icon-calendar {
-	z-index: 1;
-	background-image: url(../img/calendar.svg);
-	background-repeat: no-repeat;
-	background-position: 300px center;
-}
-
 
 .form-item-block .button{
 	margin: 0;
@@ -613,7 +605,7 @@ li:nth-child(3) .recommend-title::before  {
 }
 
 .button-calendar {
-	position: absolute;
+	position: relative;
 	right: 45px;
 	fill: #cacaca;
 }
