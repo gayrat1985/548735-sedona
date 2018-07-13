@@ -647,17 +647,19 @@ li:nth-child(3) .recommend-title::before  {
 	
 }
 
-.main-footer div {
-	display: flex;
-	align-items: center;
-	width: 401px;
-	min-height: 120px;
-	
+.main-footer .footer-column {
 	background-color: #f9fbf6;
 }
 
-.hashtag-footer {
+.main-footer div {
 	display: flex;
+	width: 400px;
+	
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+.hashtag-footer {
 	font-weight: 700;
 	font-size: 21px;
 	line-height: 26px;
@@ -667,19 +669,22 @@ li:nth-child(3) .recommend-title::before  {
 }
 
 .hashtag-footer a{
+	margin-top: 10px;
 	color: #000000;
 }
 
-.social-footer ul {
+.social-footer  {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	width: 150px;
-
+	justify-content: center;
 	margin: 0 auto;
 	padding: 0;
 
 	list-style: none;
+}
+
+.social-footer p {
+	margin: 0;
 }
 
 .social-button {
@@ -688,7 +693,7 @@ li:nth-child(3) .recommend-title::before  {
 	justify-content: center;
 	width: 46px;
 	height: 48px;
-
+    margin-right: 10px;
 	background-color: #81b3d2;
 }
 
@@ -712,8 +717,13 @@ li:nth-child(3) .recommend-title::before  {
 }
 
 .copyright-footer p {
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-right: 8px;
+}
+
+.copyright-footer a {
+	margin-top: 5px;
+	
 }
 
 .copyright-footer .htmlacademy-logo:hover path,
